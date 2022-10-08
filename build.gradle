@@ -16,6 +16,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -27,11 +28,14 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-aop'
 
-    //    # redis 의존성
+    // redis 의존성
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
     // redisson
     implementation 'org.redisson:redisson-spring-boot-starter:3.17.7'
+
+    // jitpack
+    implementation 'com.github.DevRunner21:pawn-distributed-lock:Tag'
 }
 
 tasks.named('test') {
