@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.pawn'
-version = '0.0.9-SNAPSHOT'
+version = '0.0.10-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -19,9 +19,9 @@ repositories {
     mavenCentral()
 }
 
-jar{
-    enabled false
-}
+//jar{
+//    enabled false
+//}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
