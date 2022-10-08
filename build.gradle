@@ -19,9 +19,8 @@ repositories {
     mavenCentral()
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
+jar{
+    enabled false
 }
 
 dependencies {
