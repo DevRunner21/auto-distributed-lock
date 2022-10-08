@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.pawn'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -39,6 +39,10 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId = 'com.pawn'
+            artifactId = 'auto-distributed-lock'
+            version = '0.0.2-SNAPSHOT'
+
             from components.java
         }
     }
