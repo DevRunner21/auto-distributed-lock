@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.4'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'com.pawn'
@@ -16,7 +17,6 @@ configurations {
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -34,8 +34,19 @@ dependencies {
     // redisson
     implementation 'org.redisson:redisson-spring-boot-starter:3.17.7'
 
-    // jitpack
-    implementation 'com.github.DevRunner21:pawn-distributed-lock:Tag'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+wrapper {
+    gradleVersion = "7.3.3"
+    distributionType = Wrapper.DistributionType.ALL
 }
 
 tasks.named('test') {
