@@ -1,12 +1,11 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.4'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
-    id 'java'
+    id 'java-library'
     id 'maven-publish'
 }
 
 group = 'com.pawn'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.3-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -41,16 +40,11 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.pawn'
             artifactId = 'auto-distributed-lock'
-            version = '0.0.2-SNAPSHOT'
+            version = '0.0.3-SNAPSHOT'
 
             from components.java
         }
     }
-}
-
-wrapper {
-    gradleVersion = "7.3.3"
-    distributionType = Wrapper.DistributionType.ALL
 }
 
 tasks.named('test') {
