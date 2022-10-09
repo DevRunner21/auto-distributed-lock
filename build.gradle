@@ -1,3 +1,4 @@
+
 plugins {
     id 'org.springframework.boot' version '2.7.4'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
@@ -5,9 +6,13 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.pawn'
+group = 'com.pawn.autodistributedlock'
 version = '0.0.10-SNAPSHOT'
-sourceCompatibility = '11'
+
+//group = 'com.pawn'
+//version = '0.0.10-SNAPSHOT'
+//sourceCompatibility = '11'
+//targetCompatibility = '11'
 
 configurations {
     compileOnly {
