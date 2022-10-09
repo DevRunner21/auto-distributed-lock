@@ -6,10 +6,10 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @EnableCaching
 @SpringBootApplication
-public class DistributedLockApplication {
+public class AutoDistributedLockApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DistributedLockApplication.class, args);
+        SpringApplication.run(AutoDistributedLockApplication.class, args);
     }
 
 }
