@@ -19,10 +19,6 @@ repositories {
     mavenCentral()
 }
 
-//jar{
-//    enabled false
-//}
-
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -43,6 +39,9 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
             from components.java
         }
     }
@@ -50,4 +49,9 @@ publishing {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+wrapper {
+    gradleVersion = "7.3.3"
+    distributionType = Wrapper.DistributionType.ALL
 }
